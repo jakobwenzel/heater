@@ -17,7 +17,7 @@ Setting up the client
 
 * After setting up a device in AWS IOT, get your certificate as described [here](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
 * Inside the `client` directory, create a file called `settings.py` with content like this:
-```
+```python
 useWebsocket = False
 host = "my-endpoint.iot.eu-central-1.amazonaws.com"
 rootCAPath = "root-CA.crt"
@@ -41,7 +41,7 @@ or [ClasspathPropertiesFileCredentialsProvider](http://docs.aws.amazon.com/AWSJa
 to setup your AWS Credentials for the server
 * in `src/main/resources/`, create a file called `settings.json` with content like the following:
 
-```
+```json
 {
   "region": "eu-central-1",
   "endpoint":"my-endpoint.iot.eu-central-1.amazonaws.com",
