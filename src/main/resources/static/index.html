@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heater</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.js" ></script>
+    <script type="text/javascript" src="site.js" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <style type="text/css">
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="setting1"><input type="radio" name="setting" value="1" id="setting1" checked>1</label>
+    <label for="setting2"><input type="radio" name="setting" value="2" id="setting2">2</label>
+    <label for="setting3"><input type="radio" name="setting" value="3" id="setting3">3</label>
+    <label for="setting4"><input type="radio" name="setting" value="4" id="setting4">4</label>
+    <label for="setting5"><input type="radio" name="setting" value="5" id="setting5">5</label>
+    <label for="setting6"><input type="radio" name="setting" value="6" id="setting6">6</label>
+    <label for="setting7"><input type="radio" name="setting" value="7" id="setting7">7</label>
+    <hr/>
+    <input type="button" onclick="sendImmediately()" value="Set Immediately" />
+    <hr>
+    <input type="datetime-local" id="datetime">
+    <input type="button" onclick="schedule()" value="Add to schedule" />
+</form>
+<hr>
+<div id="scheduleList">Schedule not yet loaded...</div>
+</body>
+</html>

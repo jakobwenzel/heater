@@ -1,0 +1,15 @@
+apply plugin: 'application'
+mainClassName = "jakobwenzel.heater.Main"
+
+repositories {
+	mavenCentral()
+}
+dependencies {
+	//compile "org.glassfish.grizzly:grizzly-http-server:2.3.28"
+
+	compile "org.glassfish.jersey.containers:jersey-container-grizzly2-http:+"
+	compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.79'
+	compile "org.glassfish.jersey.media:jersey-media-json-jackson:+"
+
+	compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.6.1"
+}
