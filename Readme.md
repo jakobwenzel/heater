@@ -1,7 +1,7 @@
 Heater Controller
 =================
 
-This program makes my dumb old heater _smart_.
+This program makes my dumb old heater _smart_. Control it from the web and set up a heating schedule.
 
 System architecture
 -------------------
@@ -15,7 +15,7 @@ The Java server needs to be running somewhere on the web. Users can control the 
 Setting up the client
 ---------------------
 
-* After setting up a device in AWS IOT, get your certificate as described [here](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html).
+* After setting up a device in AWS IOT, get your certificate as described [here](http://docs.aws.amazon.com/iot/latest/developerguide/create-device-certificate.html) and put it in the `client` directory.
 * Inside the `client` directory, create a file called `settings.py` with content like this:
 ```python
 useWebsocket = False
@@ -53,11 +53,13 @@ to setup your AWS Credentials for the server
   ]
 }
 ```
-  * Passwords are currently not hashed. Use with caution! (Pull Requests are welcome :) )
-  * There are no fine grained permissions. Once a user is logged in, they may do everything.
+
+   * Passwords are currently not hashed. Use with caution! (Pull Requests are welcome :) )
+   * There are no fine grained permissions. Once a user is logged in, they may do everything.
+   
 * Do one of the following:
   * Either run the Server with `./gradlew run`
-  * Or create a folder with all jars plus a start script with `./gradlew installDist` (output is located in `build/install`)
+  * Or create a folder with all jars plus a start script by running `./gradlew installDist` (output is located in `build/install`)
 
 * To remember users authorized by cookie, the server will create a file called `authorized.json` in its working directory, so make sure it's writable.
 
